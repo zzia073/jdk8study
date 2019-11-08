@@ -2,7 +2,6 @@ package com.study.jdk.stream;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 
 /**
  * @author ：fei
@@ -30,6 +29,7 @@ import java.util.function.Function;
  * 每个pipeline的构造方法都只是为了构造Stream的Head，中间阶段不是通过直接调用构造方法构造出来的，
  * 是通过各种流的Op对象间接调用构造方法实现StatelessOp和StatefulOp
  *
+ * TerminalOp 终止操作 FindOp ForeachOp MatchOp ReduceOp
  *
  * Sink extends Consumer (Sink之所以是Consumer是因为它的目的只需要包装流执行自己的操作并将结果传给下游流的Sink，相当于对流的消费)
  * Sink 有两个状态 initial 和 active
